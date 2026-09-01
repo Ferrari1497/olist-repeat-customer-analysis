@@ -10,6 +10,10 @@ OlistのEC購買データを用いたリピート顧客分析・売上向上施�
 - DBeaver
 - Excel for the web
 
+## テーブル構成
+
+![Olist リピート顧客分析：テーブル構成図](images/er_diagram.png)
+
 ## 使用データ
 Olist Brazilian E-Commerce Public Dataset
 
