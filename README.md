@@ -20,7 +20,6 @@ Olist Brazilian E-Commerce Public Dataset
 - 注文データ（olist_orders_dataset）
 - 注文明細データ（olist_order_items_dataset）
 - 支払データ（olist_order_payments_dataset）
-- 商品データ（olist_products_dataset）
 
 ## 分析内容
 
