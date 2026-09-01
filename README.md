@@ -39,16 +39,19 @@ Olist Brazilian E-Commerce Public Dataset
 全顧客96,096人のうちリピート顧客は2,997人で、リピート率は3.12%にとどまった。
 
 ![リピート率](images/repeat_rate.png)
+[使用SQLを見る](sql/01_repeat_rate.sql)
 
 ### 2. 1注文あたり平均購入金額
 リピート顧客の1注文あたり平均購入金額は148.85 BRLで、非リピート顧客の161.82 BRLと比較して約8.0%低かった。
 
 ![平均購入金額](images/average_order_value.png)
+[使用SQLを見る](sql/02_average_order_value.sql)
 
 ### 3. 1注文あたり平均購入点数
 リピート顧客の1注文あたり平均購入点数は1.21点で、非リピート顧客の1.14点より0.07点多かったが、大きな差は確認されなかった。
 
 ![平均購入点数](images/average_items_per_order.png)
+[使用SQLを見る](sql/03_average_items_per_order.sql)
 
 ## 施策提案・効果検証
 
