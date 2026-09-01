@@ -50,3 +50,10 @@ Olist Brazilian E-Commerce Public Dataset
 
 ![平均購入点数](images/average_items_per_order.png)
 
+## 施策提案・効果検証
+
+### 施策1：リピート率の改善
+初回購入者に対して、次回購入時に利用できるクーポンを配布し、再購入を促す。
+
+**効果検証**  
+初回購入者をクーポン配布群と非配布群に分けてA/Bテストを行い、リピート率を比較する。
