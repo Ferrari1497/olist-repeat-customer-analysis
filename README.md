@@ -48,3 +48,5 @@ Olist Brazilian E-Commerce Public Dataset
 ### 3. 1注文あたり平均購入点数
 リピート顧客の1注文あたり平均購入点数は1.21点で、非リピート顧客の1.14点より0.07点多かったが、大きな差は確認されなかった。
 
+![平均購入点数](images/average_items_per_order.png)
+
