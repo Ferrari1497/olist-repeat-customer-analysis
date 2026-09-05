@@ -46,7 +46,7 @@ order_items_customer AS (
 SELECT
     AVG(order_items_customer.item_count) AS avg_items_per_order
 FROM order_items_customer
-INNER JOIN customer_order_count ON order_items_customer.customer_unique_id = customer_order_count.customer_unique_id
+    INNER JOIN customer_order_count ON order_items_customer.customer_unique_id = customer_order_count.customer_unique_id
 WHERE customer_order_count.order_count >= 2;
 
 
