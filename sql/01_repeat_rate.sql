@@ -3,7 +3,7 @@
 -- =========================================
 
 SELECT
-    COUNT(DISTINCT customer_unique_id) AS total_customers
+    COUNT(DISTINCT customer_unique_id)
 FROM olist_customers_dataset;
 
 
@@ -11,18 +11,15 @@ FROM olist_customers_dataset;
 -- 2. リピート顧客数を算出
 -- =========================================
 
-SELECT
-    COUNT(*) AS repeat_customers
-FROM (
-    SELECT
-        customer_unique_id,
-        COUNT(order_id) AS order_count
-    FROM olist_customers_dataset
-    INNER JOIN olist_orders_dataset
-        ON olist_customers_dataset.customer_id
-        = olist_orders_dataset.customer_id
-    GROUP BY customer_unique_id
-    HAVING COUNT(order_id) >= 2
+select 
+	COUNT(*)
+from(
+	select 
+		olist_customers_dataset.customer_unique_id
+	from olist_customers_dataset
+		inner join olist_orders_dataset on olist_customers_dataset.customer_id=olist_orders_dataset.customer_id
+	group by olist_customers_dataset.customer_unique_id
+	having COUNT(olist_orders_dataset.order_id)>=2
 ) AS repeat_customer_data;
 
 
