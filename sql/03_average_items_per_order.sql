@@ -33,8 +33,8 @@ order_items_customer AS (
         olist_customers_dataset.customer_unique_id,
         items_by_order.item_count
     FROM olist_orders_dataset
-        INNER JOIN olist_customers_dataset ON olist_orders_dataset.customer_id　= olist_customers_dataset.customer_id
-        INNER JOIN items_by_order ON olist_orders_dataset.order_id　= items_by_order.order_id
+        INNER JOIN olist_customers_dataset ON olist_orders_dataset.customer_id = olist_customers_dataset.customer_id
+        INNER JOIN items_by_order ON olist_orders_dataset.order_id = items_by_order.order_id
 )
 
 -- =========================================
