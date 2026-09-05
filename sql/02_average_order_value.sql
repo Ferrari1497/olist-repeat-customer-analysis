@@ -38,25 +38,18 @@ order_payment_customer AS (
 )
 
 -- =========================================
--- 4. リピート顧客の1注文あたり平均購入金額を算出
+-- 4. 1注文あたり平均購入金額を算出
+--    リピート顧客：order_count >= 2
+--    非リピート顧客：order_count = 1
 -- =========================================
 
 SELECT
     AVG(order_payment_customer.order_payment) AS avg_order_value
 FROM order_payment_customer
-    INNER JOIN customer_order_count ON order_payment_customer.customer_unique_id = customer_order_count.customer_unique_id
+INNER JOIN customer_order_count
+    ON order_payment_customer.customer_unique_id
+    = customer_order_count.customer_unique_id
 WHERE customer_order_count.order_count >= 2;
-
-
--- =========================================
--- 5. 非リピート顧客の1注文あたり平均購入金額
--- =========================================
-
-SELECT
-    AVG(order_payment_customer.order_payment) AS avg_order_value
-FROM order_payment_customer
-    INNER JOIN customer_order_count ON order_payment_customer.customer_unique_id = customer_order_count.customer_unique_id
-WHERE customer_order_count.order_count = 1;
 
 
 /*
