@@ -19,7 +19,7 @@ customer_order_count AS (
         olist_customers_dataset.customer_unique_id,
         COUNT(olist_orders_dataset.order_id) AS order_count
     FROM olist_customers_dataset
-        INNER JOIN olist_orders_dataset　ON olist_customers_dataset.customer_id = olist_orders_dataset.customer_id
+        INNER JOIN olist_orders_dataset ON olist_customers_dataset.customer_id = olist_orders_dataset.customer_id
     GROUP BY olist_customers_dataset.customer_unique_id
 ),
 
