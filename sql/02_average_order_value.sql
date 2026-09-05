@@ -19,9 +19,7 @@ customer_order_count AS (
         olist_customers_dataset.customer_unique_id,
         COUNT(olist_orders_dataset.order_id) AS order_count
     FROM olist_customers_dataset
-    INNER JOIN olist_orders_dataset
-        ON olist_customers_dataset.customer_id
-        = olist_orders_dataset.customer_id
+        INNER JOIN olist_orders_dataset　ON olist_customers_dataset.customer_id = olist_orders_dataset.customer_id
     GROUP BY olist_customers_dataset.customer_unique_id
 ),
 
@@ -35,12 +33,8 @@ order_payment_customer AS (
         olist_customers_dataset.customer_unique_id,
         payment_by_order.order_payment
     FROM olist_orders_dataset
-    INNER JOIN olist_customers_dataset
-        ON olist_orders_dataset.customer_id
-        = olist_customers_dataset.customer_id
-    INNER JOIN payment_by_order
-        ON olist_orders_dataset.order_id
-        = payment_by_order.order_id
+        INNER JOIN olist_customers_dataset ON olist_orders_dataset.customer_id = olist_customers_dataset.customer_id
+        INNER JOIN payment_by_order ON olist_orders_dataset.order_id = payment_by_order.order_id
 )
 
 -- =========================================
@@ -50,9 +44,7 @@ order_payment_customer AS (
 SELECT
     AVG(order_payment_customer.order_payment) AS avg_order_value
 FROM order_payment_customer
-INNER JOIN customer_order_count
-    ON order_payment_customer.customer_unique_id
-    = customer_order_count.customer_unique_id
+    INNER JOIN customer_order_count ON order_payment_customer.customer_unique_id = customer_order_count.customer_unique_id
 WHERE customer_order_count.order_count >= 2;
 
 
@@ -63,9 +55,7 @@ WHERE customer_order_count.order_count >= 2;
 SELECT
     AVG(order_payment_customer.order_payment) AS avg_order_value
 FROM order_payment_customer
-INNER JOIN customer_order_count
-    ON order_payment_customer.customer_unique_id
-    = customer_order_count.customer_unique_id
+    INNER JOIN customer_order_count ON order_payment_customer.customer_unique_id = customer_order_count.customer_unique_id
 WHERE customer_order_count.order_count = 1;
 
 
