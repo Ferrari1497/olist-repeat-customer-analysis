@@ -19,7 +19,7 @@ Olist Brazilian E-Commerce Public Dataset
 
 データ出典：[Kaggle - Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data)
 
-分析では以下の5つのデータを使用した。
+分析では以下の4つのデータを使用した。
 - 顧客データ（olist_customers_dataset）
 - 注文データ（olist_orders_dataset）
 - 注文明細データ（olist_order_items_dataset）
